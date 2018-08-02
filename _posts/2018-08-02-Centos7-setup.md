@@ -9,6 +9,6 @@ Changelog:
  -> install vncserver: sudo yum install tigervnc
     ref: https://www.tecmint.com/install-and-configure-vnc-server-in-centos-7/
  -> install gpuminer
- -> install docker
+ -> install docker 
     ref: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-centos-7
     
