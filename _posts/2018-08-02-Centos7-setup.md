@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Aqua
+title:  CentOS 7 Setup
 ---
 
 Summary: setup a standard centos 7 server
