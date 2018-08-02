@@ -1,4 +1,7 @@
-layout title post Aqua
+---
+layout: post
+title:  Aqua
+---
 
 Summary: setup a standard centos 7 server
 
