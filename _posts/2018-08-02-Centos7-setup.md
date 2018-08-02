@@ -1,3 +1,5 @@
+layout title post Aqua
+
 Summary: setup a standard centos 7 server
 
 Hardware: intel i9 CPU 10 core, 16G DDR4 3000hz 4-channel, 500G SSD, nVidia Geforce 1070
