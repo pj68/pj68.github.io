@@ -1,6 +1,6 @@
 
 
-setup raspGM as per the new videos
+# setup raspGM as per the new videos
 
 
 
@@ -28,3 +28,14 @@ docker run -v /tmp/OUT:/root/rasp/EC/OUT/ -v /tmp/LOG:/root/rasp/EC/LOG/  --rm m
 docker build -t my-rasp-southcape-4k .
 
 docker run -v /tmp/OUT:/root/rasp/SOUTHCAPE/OUT/ -v /tmp/LOG:/root/rasp/SOUTHCAPE/LOG/ --rm my-rasp-southcape-4k
+
+
+# ftp setup
+
+ssh-keygen
+
+upload the ~/.ssh/id_rsa.pub to nearlyfreespeech.net, in the profile tab
+
+
+system(" sftp -i /home/pj/.ssh/id_rsa -b /home/pj/wrf-portal/www/upload-blips.sftp paulhope_swiftsoft@ssh.phx.nearlyfreespeech.net  ")
+
