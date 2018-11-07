@@ -4,6 +4,24 @@
 
 
 
+# initial install
+
+- adjust the image size after install: 
+
+sudo service docker stop
+
+vim /usr/lib/systemd/system , change ExecStart=/usr/bin/dockerd to 
+ExecStart=/usr/bin/dockerd --storage-opt dm.basesize=20G
+
+sudo service docker start
+
+docker info
+
+- fetch the initial drjack image
+
+sudo docker pull yavalek/drjack-wrf3
+
+
 docker run -v /tmp/OUT:/root/rasp/PANOCHE/OUT -v /tmp/LOG:/root/rasp/PANOCHE/LOG --rm -it bash
 
 video3:
