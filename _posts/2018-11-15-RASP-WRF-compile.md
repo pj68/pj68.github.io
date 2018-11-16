@@ -1,3 +1,9 @@
+
+---
+layout: post
+title: WRF Compile
+---
+
 # RASP WRF 3.6.1 compile
 
 --install the intel compiler ** 
