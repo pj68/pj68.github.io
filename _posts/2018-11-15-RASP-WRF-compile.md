@@ -33,7 +33,7 @@ title: WRF Compile
  --adjust the configure.wrf, add the compile optimizations, ref:  
  
  changed:  
- '''
+```
  LDFLAGS_LOCAL   =       -O3 -xsse4.2 -convert big_endian $(OPTAVX) 
  FCOPTIM         =       -O3 -xsse4.2 -no-prec-div -no-prec-sqrt -fp-model fast=2 -mP2OPT_vec_xform_level=103 -qoverride-limits $(OPTAVX) 
  FCBASEOPTS      =       $(FCBASEOPTS_NO_G) -FR -cm -w -I. $(FCDEBUG) -convert big_endian 
