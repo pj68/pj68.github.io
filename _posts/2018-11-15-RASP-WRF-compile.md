@@ -11,6 +11,14 @@ title: WRF Compile
   ** note: at first there was a multilib error 
    Protected multilib versions: libstdc++-4.8.5-16.el7_4.1.i686 != libstdc++-4.8.5-16.el7.x86_64 
    which was resolved by running: yum update libstdc++ 
+   note2: error - 32 bit libraries not found
+   sudo yum install libstdc*i686
+   sudo yum install libgcc*i686
+
+-- edit ~/.bash.rc add
+```
+source /home/pj/intel/parallel_studio_xe_2018/compilers_and_libraries_2018/linux/bin/compilervars.sh intel64
+```
     
  --install the intel mpi lib  
 ```
@@ -19,6 +27,8 @@ title: WRF Compile
 ```
 
  --build the WRF v3.6.1 source 
+ 
+ ref: http://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php
  ```
  source /opt/intel/bin/ifortvars.sh intel64 
  source /opt/intel/bin/iccvars.sh intel64 
