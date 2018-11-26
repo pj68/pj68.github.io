@@ -60,6 +60,11 @@ solve_em.o :
 	$(FC) -O0 -xO -mP2OPT_vec_xform_level=103 -o $@ -c $(FCFLAGS) $(MODULE_DIRS) $(PROMOTION) $(FCSUFFIX) $(SOLVE_EM_SPECIAL) $(OMP) $*.f90 
 ```
 
+--apply the drjack patch
+cd WRFV3
+patch -p1 -i WRFV3.drjack.patch
+
+
  -- build wrf 
  
  make real_em 
