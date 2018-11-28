@@ -60,12 +60,33 @@ solve_em.o :
 	$(FC) -O0 -xO -mP2OPT_vec_xform_level=103 -o $@ -c $(FCFLAGS) $(MODULE_DIRS) $(PROMOTION) $(FCSUFFIX) $(SOLVE_EM_SPECIAL) $(OMP) $*.f90 
 ```
 
---apply the drjack patch
+-- apply the drjack patch
+
+```
 cd WRFV3
 patch -p1 -i WRFV3.drjack.patch
+```
 
 -- if there are errors, reverse the patch 
+```
  patch -p1 -R -i WRFV3.drjack.patch
+```
+
+-- clean, use -a as there have been changes to the Registery files
+```
+./clean -a
+```
+-- ref:
+
+http://www.drjack.info/cgi-bin/WEBBBS/rasp-forum_config.pl/read/4884
+
+https://dtcenter.org/wrf-nmm/users/docs/user_guide/V3/users_guide_nmm_chap6.pdf
+
+http://hpclab.ucentral.edu.co/~jmolina/TutorialWRF/WRF%20Software/WRF_Registry_and_Examples.pdf
+
+https://www.climatescience.org.au/sites/default/files/WRF_gill_registry.pdf
+
+
 
  -- build wrf 
  
