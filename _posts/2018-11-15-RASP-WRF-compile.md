@@ -64,6 +64,8 @@ solve_em.o :
 cd WRFV3
 patch -p1 -i WRFV3.drjack.patch
 
+-- if there are errors, reverse the patch 
+ patch -p1 -R -i WRFV3.drjack.patch
 
  -- build wrf 
  
