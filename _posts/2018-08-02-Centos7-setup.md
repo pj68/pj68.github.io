@@ -18,10 +18,10 @@ Changelog:
  - install vncserver: 
  
     ref: https://www.tecmint.com/install-and-configure-vnc-server-in-centos-7/ 
-    
+    ```
     edit ~/.vnc/xstartup replace last line with startkde &
-    
     vncserver :3 -geometry 2000x1400 -extension RANDR 
+    ```
     
  - install gpuminer
  
@@ -35,3 +35,8 @@ Changelog:
  
     ref: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-centos-7
     
+ - install chrome
+    download rpm from https://www.google.com/chrome/
+    ```
+    sudo yum install google*.rpm
+    ```
