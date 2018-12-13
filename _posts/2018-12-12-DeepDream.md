@@ -25,6 +25,8 @@ sudo docker run  --runtime=nvidia -v  /tmp/deep:/root/deep/share --rm -it  dream
 ```
 docker build commands
 ```
+apt-get update
+
 apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
 
 apt-get install --no-install-recommends libboost-all-dev
@@ -32,8 +34,23 @@ apt-get install --no-install-recommends libboost-all-dev
 chmod a+x share/Anaconda3-5.3.1-Linux-x86_64.sh
 
 share/Anaconda3-5.3.1-Linux-x86_64.sh
+export PATH=/root/anaconda3/bin:$PATH
+export LD_LIBRARY_PATH=/root/anaconda3/lib:$LD_LIBRARY_PATH
+
 
 apt-get install libatlas-base-dev 
+apt-get install liblmdb-dev
+apt-get install libhdf5-dev
+apt-get install libgoogle-glog-dev
+
+
+make all -j8
+ake test
+make runtest
+
+
+
+
 ```
 
 - install caffe
