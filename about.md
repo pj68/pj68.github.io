@@ -4,14 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Some information about you! About me.....
+Software development
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-More about me.
 
 ### Contact me
 
-[emailme@domain.com](mailto:emailme@domain.com)
+[paul@swiftsoft.co.za](mailto:paul@swiftsoft.co.za)
