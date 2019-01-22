@@ -48,7 +48,7 @@ docker build -t my-rasp-southcape-4k .
 docker run -v /tmp/OUT:/root/rasp/SOUTHCAPE/OUT/ -v /tmp/LOG:/root/rasp/SOUTHCAPE/LOG/ --rm my-rasp-southcape-4k
 
 
-# ftp setup
+## ftp setup
 
 ssh-keygen
 
@@ -56,4 +56,14 @@ upload the ~/.ssh/id_rsa.pub to nearlyfreespeech.net, in the profile tab
 
 
 system(" sftp -i /home/pj/.ssh/id_rsa -b /home/pj/wrf-portal/www/upload-blips.sftp paulhope_swiftsoft@ssh.phx.nearlyfreespeech.net  ")
+
+## local docker setup's
+natal:
+``` 
+cd /home/pj/docker/rasp-docker-script-master/drjack-wrf3-natal/
+docker build -t my-rasp-natal-3k-12z-0day .
+
+docker run -v /tmp/NATAL/OUT:/root/rasp/NATAL/OUT/ -v /tmp/NATAL/LOG:/root/rasp/NATAL/SOUTHCAPE/LOG/ --rm my-rasp-natal-3k-12z-0day:latest
+```
+
 
