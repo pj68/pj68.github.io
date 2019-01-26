@@ -31,3 +31,9 @@
  ```
   sudo yum install nvidia-docker2
  ```
+ 
+ # nvidia .run driver install
+ 
+ ref: http://www.advancedclustering.com/act_kb/installing-nvidia-drivers-rhel-centos-7/
+ 
+ 
