@@ -40,5 +40,8 @@
  nvidia driver download:
  https://www.nvidia.com/object/unix.html
  
+ # nvidia cuda docker
+ 
+ ref: https://hub.docker.com/r/nvidia/cuda/
  
  
