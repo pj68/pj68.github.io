@@ -1,6 +1,6 @@
 # nVidia 10 driver install
 
- - ref: 
+ - ref: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
  
  install:
  ```
@@ -27,6 +27,7 @@
  
  # nvidia docker 2 install
  
+ ref: https://github.com/NVIDIA/nvidia-docker
  
  ```
   sudo yum install nvidia-docker2
@@ -35,5 +36,9 @@
  # nvidia .run driver install
  
  ref: http://www.advancedclustering.com/act_kb/installing-nvidia-drivers-rhel-centos-7/
+ 
+ nvidia driver download:
+ https://www.nvidia.com/object/unix.html
+ 
  
  
