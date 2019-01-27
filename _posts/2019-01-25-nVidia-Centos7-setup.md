@@ -40,6 +40,20 @@
  nvidia driver download:
  https://www.nvidia.com/object/unix.html
  
+ - uninstall old vnidia driver
+ ```
+ /usr/bin/nvidia-uninstall
+ ```
+ - switch to text mode
+```
+sudo systemctl isolate multi-user.target 
+ ```
+ - install new driver
+ ```
+ /home/pj/NVIDIA-Linux-x86_64-390.67.run
+ ```
+ 
+ 
  # nvidia cuda docker
  
  ref: https://hub.docker.com/r/nvidia/cuda/
