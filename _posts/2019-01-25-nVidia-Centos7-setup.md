@@ -48,9 +48,9 @@
 ```
 sudo systemctl isolate multi-user.target 
  ```
- - install new driver
+ - install new cuda & driver
  ```
- /home/pj/NVIDIA-Linux-x86_64-390.67.run
+ /home/pj/cuda_10.0.130_410.48_linux
  ```
  
  
