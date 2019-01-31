@@ -52,7 +52,11 @@ sudo systemctl isolate multi-user.target
  ```
  /home/pj/cuda_10.0.130_410.48_linux
  ```
- 
+ - issue: segment fault on x startup, resolve by reinstalling x:
+ ```
+ yum reinstall xorg-x11-server-Xorg
+ ```
+ ref: http://rglinuxtech.com/?p=2423
  
  # nvidia cuda docker
  
