@@ -62,15 +62,17 @@ sudo systemctl isolate multi-user.target
  
  ref: https://hub.docker.com/r/nvidia/cuda/
  
- 
+ - build the container
  ```
  docker pull nvidia/cuda:10.0-cudnn7-devel
  docker build -t caffe2 .
  docker run  --runtime=nvidia -v  /tmp/deep:/root/share --rm -it  caffe2:latest bash
- 
  ```
- 
- 
+ - add the caffe src and build
+```
+find / -type f -name "*blas*.so"
+
+```
  
  
  
