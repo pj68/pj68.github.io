@@ -71,8 +71,17 @@ sudo systemctl isolate multi-user.target
  - add the caffe src and build
 ```
 find / -type f -name "*blas*.so"
-
 ```
+ - add python caffe interface..
+ ```
+ apt install python-pip
+ cd python
+ for req in $(cat requirements.txt); do pip install $req; done
  
+ make pycaffe
+ export PYTHONPATH=/root/caffe/python:$PYTHONPATH
+ export CAFFE_ROOT=/root/caffe
+
+ ```
  
  
