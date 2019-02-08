@@ -115,4 +115,13 @@ find / -type f -name "*blas*.so"
  docker run --runtime=nvidia -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --rm caffe2-3 bash
 
  ```
+  - mnist : http://caffe.berkeleyvision.org/gathered/examples/mnist.html
+
+ ```
+ cd ~/caffe
+ ./examples/mnist/create_mnist.sh 
+ ./examples/mnist/train_lenet.sh
+ ```
+ 
+ 
  
