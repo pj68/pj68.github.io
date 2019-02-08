@@ -87,6 +87,8 @@ find / -type f -name "*blas*.so"
  
  ref: https://www.alanzucconi.com/2016/05/25/generating-deep-dreams/
  
+ 
+  - build caffe
  ```
   cd ~\caffe
 
@@ -96,6 +98,9 @@ find / -type f -name "*blas*.so"
  make runtest
  make distribute
 
+```
+- run deepdream
+```
  cp distribute/lib/libcaffe.so distribute/python/caffe
 
  cp -r distribute/python/caffe /usr/local/lib/python2.7/dist-packages/caffe
@@ -109,10 +114,14 @@ find / -type f -name "*blas*.so"
 
  
  
- export PYTHONPATH=/root/caffe/python::/root/caffe/distribute/python/
- export LD_LIBRARY_PATH=:/root/caffe/distribute/python/caffe
+ sudo xhost +
+ docker run --runtime=nvidia -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /tmp/deep:/root/share --rm caffe2-3 bash
 
- docker run --runtime=nvidia -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --rm caffe2-3 bash
+export PYTHONPATH=/root/caffe/python::/root/caffe/distribute/python/
+ export LD_LIBRARY_PATH=:/root/caffe/distribute/python/caffe
+ cd deepdream
+ mkdir frames
+ python dream.py
 
  ```
   - mnist : http://caffe.berkeleyvision.org/gathered/examples/mnist.html
