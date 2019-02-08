@@ -83,5 +83,12 @@ find / -type f -name "*blas*.so"
  export CAFFE_ROOT=/root/caffe
 
  ```
- 
+ - deepdream :
+ ```
+ export PYTHONPATH=/root/caffe/python::/root/caffe/distribute/python/
+ export LD_LIBRARY_PATH=:/root/caffe/distribute/python/caffe
+
+ docker run --runtime=nvidia -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --rm caffe2-3 bash
+
+ ```
  
