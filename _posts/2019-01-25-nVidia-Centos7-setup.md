@@ -83,8 +83,32 @@ find / -type f -name "*blas*.so"
  export CAFFE_ROOT=/root/caffe
 
  ```
- - deepdream :
+ - deepdream 
+ 
+ ref: https://www.alanzucconi.com/2016/05/25/generating-deep-dreams/
+ 
  ```
+  cd ~\caffe
+
+ make clean
+ make all -j 8
+ make test
+ make runtest
+ make distribute
+
+ cp distribute/lib/libcaffe.so distribute/python/caffe
+
+ cp -r distribute/python/caffe /usr/local/lib/python2.7/dist-packages/caffe
+
+ touch /etc/ld.so.conf.d/caffe.conf
+
+ curl -O "http://dl.caffe.berkeleyvision.org/bvlc_googlenet.caffemodel"
+ cd ~
+ 
+ git clone https://github.com/google/deepdream.git
+
+ 
+ 
  export PYTHONPATH=/root/caffe/python::/root/caffe/distribute/python/
  export LD_LIBRARY_PATH=:/root/caffe/distribute/python/caffe
 
