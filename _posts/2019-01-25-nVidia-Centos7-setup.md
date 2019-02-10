@@ -124,7 +124,24 @@ export PYTHONPATH=/root/caffe/python::/root/caffe/distribute/python/
  python dream.py
 
  ```
-  - mnist : http://caffe.berkeleyvision.org/gathered/examples/mnist.html
+
+```
+docker run  --runtime=nvidia -v  /tmp/deep:/root/share -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix  --rm -it  paulhope/caffe-deepdream:version1 bash
+
+```
+
+- network train
+
+ref: https://www.facebook.com/groups/733099406836193/permalink/748784328601034
+
+
+```
+cd ~/caffe/models/MYNET
+caffe train -solver ./solver.prototxt -weights ../bvlc_googlenet/bvlc_googlenet.caffemodel
+
+```
+
+- mnist : http://caffe.berkeleyvision.org/gathered/examples/mnist.html
 
  ```
  cd ~/caffe
