@@ -139,6 +139,8 @@ ref: https://www.facebook.com/groups/733099406836193/permalink/748784328601034
 cd ~/caffe/models/MYNET
 caffe train -solver ./solver.prototxt -weights ../bvlc_googlenet/bvlc_googlenet.caffemodel
 
+caffe train -solver ./solver.prototxt -snapshot MYNET_iter_50000.solverstate
+
 ```
 
 - mnist : http://caffe.berkeleyvision.org/gathered/examples/mnist.html
