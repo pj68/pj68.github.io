@@ -151,5 +151,9 @@ caffe train -solver ./solver.prototxt -snapshot MYNET_iter_50000.solverstate
  ./examples/mnist/train_lenet.sh
  ```
  
+ # train new network
  
- 
+ ```
+ caffe train --solver=/root/caffe/models/mynet2_alexnet/solver.prototxt
+
+ ```
