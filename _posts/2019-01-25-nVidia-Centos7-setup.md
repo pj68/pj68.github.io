@@ -130,7 +130,7 @@ docker run  --runtime=nvidia -v  /tmp/deep:/root/share -e DISPLAY=$DISPLAY -v /t
 
 ```
 
-- network train
+## network train
 
 ref: https://www.facebook.com/groups/733099406836193/permalink/748784328601034
 
@@ -151,7 +151,9 @@ caffe train -solver ./solver.prototxt -snapshot MYNET_iter_50000.solverstate
  ./examples/mnist/train_lenet.sh
  ```
  
- # train new network
+ ## train new network
+ 
+ ref: https://chunml.github.io/ChunML.github.io/project/Training-Your-Own-Data-On-Caffe/
  
  ```
  caffe train --solver=/root/caffe/models/mynet2_alexnet/solver.prototxt
