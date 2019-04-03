@@ -66,4 +66,31 @@ docker build -t my-rasp-natal-3k-12z-0day .
 docker run -v /tmp/NATAL/OUT:/root/rasp/NATAL/OUT/ -v /tmp/NATAL/LOG:/root/rasp/NATAL/SOUTHCAPE/LOG/ --rm my-rasp-natal-3k-12z-0day:latest
 ```
 
+## cloud deployment
 
+```
+docker build -t my-rasp-eastcape-4k .
+
+docker tag a4735d34ad5c paulhope/my-rasp-eastcape-3k-docker:20190403
+
+docker save -o ~/docker/my-rasp-eastcape-3k-docker.tar paulhope/my-rasp-eastcape-3k-docker:20190403
+
+docker run -v /tmp/EASTCAPE/OUT:/root/rasp/EASTCAPE/OUT/ -v /tmp/EASTCAPE/LOG:/root/rasp/EASTCAPE/LOG/  --rm -e INIT_TIME=0 -e START_HOUR=3 paulhope/my-rasp-eastcape-3k-docker:20190403
+
+
+docker login --username=paulhope
+
+
+
+
+docker push paulhope/my-rasp-eastcape-3k-docker:20190403
+
+
+
+
+tar cvzf ec-4k.tar.gz my-rasp-eastcape-4k-pre.tar 
+
+ split -v 250M -d ec-4k.tar.gz
+
+
+```
