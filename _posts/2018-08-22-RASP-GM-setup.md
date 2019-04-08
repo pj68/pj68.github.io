@@ -91,6 +91,20 @@ docker push paulhope/my-rasp-eastcape-3k-docker:20190403
 tar cvzf ec-4k.tar.gz my-rasp-eastcape-4k-pre.tar 
 
  split -v 250M -d ec-4k.tar.gz
+cat x* > ec-4k.tar.gz
+cat x* > my-rasp-eastcape-3k-docker.tar.gz
 
+gunzip my-rasp-eastcape-3k-docker.tar.gz
 
 ```
+
+### service-instance
+
+```
+curl http://metadata/computeMetadata/v1/instance/attributes/private-key -H "Metadata-Flavor: Google"
+ sftp -i /home/paul_james_hope_68/.ssh/id_rsa paulhope_swiftsoft@ssh.phx.nearlyfreespeech.net
+
+
+ python create_instance.py eastcape.cfg 0 auto-eastlondon-0
+```
+
