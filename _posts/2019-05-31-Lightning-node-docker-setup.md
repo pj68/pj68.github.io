@@ -5,7 +5,10 @@
 ref: https://hub.docker.com/r/elementsproject/lightningd/
 
 
+```
+docker-compose up
 
+```
 
 
 
@@ -29,7 +32,23 @@ bitcoin-cli  -testnet -rpcuser=rpcuser -rpcpassword=rpcpass sendtoaddress tb1qpp
  bitcoin-cli  -testnet -rpcuser=rpcuser -rpcpassword=rpcpass  getwalletinfo
 
 ```
+### send payment
+on the lightning node:
+ - connect to node (note: use telnet ip port to test if public node is up)
+ - create channel
+ - fund channel
 
+
+```
+lightning-cli connect 03c856d2dbec7454c48f311031f06bb99e3ca1ab15a9b9b35de14e139aa663b463 34.201.74.232 9735
+
+
+lightning-cli fundchannel 03c856d2dbec7454c48f311031f06bb99e3ca1ab15a9b9b35de14e139aa663b463 1000000
+
+lightning-cli listpeers
+
+
+```
 
 
 links:
