@@ -6,6 +6,11 @@ ref: https://hub.docker.com/r/elementsproject/lightningd/
 
 
 ```
+docker build -t lightd .
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+ sudo chmod +x /usr/local/bin/docker-compose
+
 docker-compose up
 sudo docker exec -i -t 1e5379877d76 /bin/bash
 ```
@@ -32,7 +37,7 @@ lightning-cli listpeers
 ```
 bitcoin-cli  -testnet -rpcuser=rpcuser -rpcpassword=rpcpass  getblockcount
 bitcoin-cli  -testnet -rpcuser=rpcuser -rpcpassword=rpcpass sendtoaddress tb1qpprwh7apljv9kgd4hcv2h7d0ah5r4jeqgvrcqz 0.01
- bitcoin-cli  -testnet -rpcuser=rpcuser -rpcpassword=rpcpass  getwalletinfo
+bitcoin-cli  -testnet -rpcuser=rpcuser -rpcpassword=rpcpass  getwalletinfo
 
 ```
 ### send payment
@@ -51,8 +56,14 @@ lightning-cli fundchannel 03c856d2dbec7454c48f311031f06bb99e3ca1ab15a9b9b35de14e
 
 lightning-cli listpeers
 
-
 ```
+
+### internet testnet wallet
+
+https://htlc.me/
+
+ade37167-a353-499f-94d7-2c5666f9a992
+
 ### docker-compose.yml
 ```
 version: "3"
