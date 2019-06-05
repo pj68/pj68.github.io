@@ -103,9 +103,12 @@ volumes:
 ```
 
 links:
+
 https://medium.com/@Jayvdb/setting-up-and-transacting-on-the-bitcoin-lightning-network-a9ada42ec305
 https://medium.com/coinmonks/installing-lightning-network-part-2-here-we-go-again-ed5a84f9cade
 https://medium.com/coinmonks/raspberry-pi-lightning-network-w-no-external-drive-5-steps-d4fba98ac8cb
 https://github.com/ElementsProject/lightning
 https://hub.docker.com/r/elementsproject/lightningd/
+https://github.com/ElementsProject/lightning/blob/master/README.md
+
 
