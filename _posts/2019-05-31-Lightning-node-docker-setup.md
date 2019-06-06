@@ -46,7 +46,7 @@ on the lightning node:
  - connect to node (note: use telnet ip port to test if public node is up)
  - create channel
  - fund channel
-
+ - send payment
 
 ```
 lightning-cli connect 03c856d2dbec7454c48f311031f06bb99e3ca1ab15a9b9b35de14e139aa663b463 34.201.74.232 9735
@@ -60,9 +60,12 @@ lightning-cli listpeers
 
 ### internet testnet wallet
 
-https://htlc.me/
+ - wallet: https://htlc.me/
 
 ade37167-a353-499f-94d7-2c5666f9a992
+
+ - starblocks: https://starblocks.acinq.co/
+ 
 
 ### docker-compose.yml
 ```
