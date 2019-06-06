@@ -58,7 +58,7 @@ lightning-cli listpeers
 
 ```
 
-### internet testnet wallet
+### internet testnet 
 
  - wallet: https://htlc.me/
 
@@ -66,6 +66,11 @@ ade37167-a353-499f-94d7-2c5666f9a992
 
  - starblocks: https://starblocks.acinq.co/
  
+ - explorer:
+ 
+ https://1ml.com/testnet/ 
+ 
+ https://explorer.acinq.co
 
 ### docker-compose.yml
 ```
