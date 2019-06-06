@@ -124,5 +124,7 @@ https://medium.com/coinmonks/raspberry-pi-lightning-network-w-no-external-drive-
 https://github.com/ElementsProject/lightning
 https://hub.docker.com/r/elementsproject/lightningd/
 https://github.com/ElementsProject/lightning/blob/master/README.md
+https://interfect.github.io/#!/posts/009-Ride-the-Lightning.md
+
 
 
