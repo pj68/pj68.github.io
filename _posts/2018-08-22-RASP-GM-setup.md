@@ -68,13 +68,43 @@ docker run -v /tmp/NATAL/OUT:/root/rasp/NATAL/OUT/ -v /tmp/NATAL/LOG:/root/rasp/
 
 ## cloud deployment
 
+
+ - build the image & tag with your dockerhub username
+
 ```
 docker build -t my-rasp-eastcape-4k .
 
 docker tag a4735d34ad5c paulhope/my-rasp-eastcape-3k-docker:20190403
+```
 
+ - save to a tar and split into chunks (note do not zip the file as the may be issues loading the doker image later) 
+
+```
 docker save -o ~/docker/my-rasp-eastcape-3k-docker.tar paulhope/my-rasp-eastcape-3k-docker:20190403
 
+split -v 250M -d ec-4k.tar.gz
+ ```
+ - upload the chunks to a cloud instance (for goole cloud, start an instance, open the console, right click on the hub icon and select upload file)
+ 
+ - on the cloud instance, join the images
+ 
+ ```
+ cat x* > my-rasp-eastcape-3k-docker.tar.gz
+ ```
+ 
+ - load the image
+ ```
+  docker load -i  my-rasp-eastcape-3k-docker.tar
+ 
+ ```
+ - push the image onto github
+ 
+ ```
+docker push paulhope/my-rasp-eastcape-3k-docker:20190403 
+ ```
+ 
+ misc....
+ ```
 docker run -v /tmp/EASTCAPE/OUT:/root/rasp/EASTCAPE/OUT/ -v /tmp/EASTCAPE/LOG:/root/rasp/EASTCAPE/LOG/  --rm -e INIT_TIME=0 -e START_HOUR=3 paulhope/my-rasp-eastcape-3k-docker:20190403
 
 
