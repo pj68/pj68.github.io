@@ -11,6 +11,8 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-
 
  sudo chmod +x /usr/local/bin/docker-compose
 
+cd /home/pj/light/lightd
+
 docker-compose up
 sudo docker exec -i -t 1e5379877d76 /bin/bash
 ```
@@ -49,12 +51,19 @@ on the lightning node:
  - send payment
 
 ```
+docker ps
+
+sudo docker exec -i -t 155e0baaa5b5  /bin/bash 
+
+
 lightning-cli connect 03c856d2dbec7454c48f311031f06bb99e3ca1ab15a9b9b35de14e139aa663b463 34.201.74.232 9735
 
 
 lightning-cli fundchannel 03c856d2dbec7454c48f311031f06bb99e3ca1ab15a9b9b35de14e139aa663b463 1000000
 
 lightning-cli listpeers
+
+lightning-cli pay <receipt>
 
 ```
 
