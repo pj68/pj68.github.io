@@ -58,12 +58,35 @@ upload the ~/.ssh/id_rsa.pub to nearlyfreespeech.net, in the profile tab
 system(" sftp -i /home/pj/.ssh/id_rsa -b /home/pj/wrf-portal/www/upload-blips.sftp paulhope_swiftsoft@ssh.phx.nearlyfreespeech.net  ")
 
 ## local docker setup's
+wrfsi
+```
+ docker run -it -e DISPLAY=$DISPLAY --net=host --rm -v /tmp/EASTCAPE:/root/domains  drjack-wrf2-wrfsi-se:latest bash
+
+```
+create data points
+```
+python ../latlon2d-dat-to-js.py  -i /tmp/EASTCAPE/EASTCAPE/static/latlon2d.d02.dat >latlon2d.json
+
+```
+
 natal:
 ``` 
 cd /home/pj/docker/rasp-docker-script-master/drjack-wrf3-natal/
 docker build -t my-rasp-natal-3k-12z-0day .
 
 docker run -v /tmp/NATAL/OUT:/root/rasp/NATAL/OUT/ -v /tmp/NATAL/LOG:/root/rasp/NATAL/SOUTHCAPE/LOG/ --rm my-rasp-natal-3k-12z-0day:latest
+```
+
+eastcape-big:
+```
+docker build -t my-rasp-eastcape-3k-big .
+
+docker run -v /tmp/EASTCAPE/OUT:/root/rasp/EASTCAPE/OUT/ -v /tmp/EASTCAPE/LOG:/root/rasp/EASTCAPE/LOG/  --rm -e INIT_TIME=0 -e START_HOUR=3 my-rasp-eastcape-3k-big:latest
+
+
+docker run -v /tmp/EASTCAPE/OUT:/root/rasp/EASTCAPE/OUT/ -v /tmp/EASTCAPE/LOG:/root/rasp/EASTCAPE/LOG/  --rm -e INIT_TIME=6 -e START_HOUR=0  my-rasp-eastcape-3k-big:latest 
+
+
 ```
 
 ## cloud deployment
