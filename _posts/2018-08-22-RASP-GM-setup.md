@@ -143,7 +143,7 @@ docker push paulhope/my-rasp-eastcape-3k-docker:20190403
 
 tar cvzf ec-4k.tar.gz my-rasp-eastcape-4k-pre.tar 
 
- split -v 250M -d ec-4k.tar.gz
+ split -b 250M -d ec-4k.tar.gz
 cat x* > ec-4k.tar.gz
 cat x* > my-rasp-eastcape-3k-docker.tar.gz
 
