@@ -25,8 +25,8 @@ sudo rpm -ivh fahcontrol-7.5.1-1.noarch.rpm
  ./FAHClient
 ```
 
-note: the config.xml will be created in the current directory, one can edit it to add, eg usrename tag, etc
-config.xml
+note: the config.xml will be created in the current directory, one can edit it to add, eg usrename tag, etc, for more comman line control one can use the FAHControlWrapper
+ an example config.xml:
 ```
 <config>
 
@@ -38,3 +38,6 @@ config.xml
 </config>
 
 ```
+
+#### review stats
+use the username in the url, eg https://stats.foldingathome.org/donor/paulhope68
